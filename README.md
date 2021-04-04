@@ -1,2 +1,40 @@
-# terraform-aws-modules
-A bunch of AWS modules to deploy AWS infrastructure. 
+# Terraform AWS Modules
+
+A bunch of AWS modules to deploy AWS infrastructure. These modules are base that means those do not have any dependency
+to other modules.
+
+## Modules
+
+- [acm](src/acm)
+- [acm-import](src/acm-import)
+- [alb-ingress-controller](src/alb-ingress-controller)
+- [client-vpn-authorization-rule](src/client-vpn-authorization-rule)
+- [client-vpn-endpoint](src/client-vpn-endpoint)
+- [client-vpn-network-association](src/client-vpn-network-association)
+- [cloudwatch-metric-alarm](src/cloudwatch-metric-alarm)
+- [docdb-cluster](src/docdb-cluster)
+- [docdb-cluster-instance](src/docdb-cluster-instance)  
+- [ec2-microservice](src/ec2-microservice) 
+- [eks-ec2-node-group](src/eks-ec2-node-group)
+- [eks-master](src/eks-master)
+- [eks-node-group](src/eks-node-group)
+- [eks-service-account](src/eks-service-account)
+- [kms-key-generator](src/kms-key-generator)
+- [ec2-launch-template](src/ec2-launch-template)  
+- [rds-postgresql](src/rds-postgresql)
+- [redis-elasticache](src/redis-elasticache)
+- [resource-group](src/resource-group)
+- [vpc](src/vpc)
+- [vpc-internet-gateway](src/vpc-internet-gateway)
+- [vpc-nat-gateway](src/vpc-nat-gateway)
+- [vpc-peering](src/vpc-peering)
+- [vpc-route-table](src/vpc-route-table)
+- [vpc-subnet](src/vpc-subnet)
+
+## Overview
+
+- **Maintainer**: mishalshah1992@gmail.com
+
+## Releases
+
+Click [here](RELEASES.md) to view Releases!!!

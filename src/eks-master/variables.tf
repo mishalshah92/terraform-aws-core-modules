@@ -1,0 +1,80 @@
+variable "cluster_name" {
+  type = string
+}
+
+variable "cluster_version" {
+  type    = string
+  default = "1.16"
+}
+
+variable "cluster_vpc_id" {
+  type = string
+}
+
+variable "cluster_subnets" {
+  type = list(string)
+}
+
+variable "security_group_ids" {
+  type    = list(string)
+  default = []
+}
+
+variable "endpoint_private_access" {
+  type    = bool
+  default = true
+}
+
+variable "endpoint_public_access" {
+  type    = bool
+  default = true
+}
+
+variable "public_access_cidrs" {
+  type    = list(string)
+  default = ["0.0.0.0/0"]
+}
+
+variable "log_retention_in_days" {
+  type    = number
+  default = 7
+}
+
+variable "log_types" {
+  type = list(string)
+  default = [
+    "api",
+    "audit"
+  ]
+}
+
+# Tags
+variable "customer" {
+  type = string
+}
+
+variable "env" {
+  type = string
+}
+
+variable "owner" {
+  type = string
+}
+
+variable "email" {
+  type = string
+}
+
+variable "repo" {
+  type = string
+}
+
+variable "tool" {
+  description = "Automation tool info"
+  default     = "Managed by Terraform"
+}
+
+variable "tags" {
+  type    = map(string)
+  default = {}
+}
