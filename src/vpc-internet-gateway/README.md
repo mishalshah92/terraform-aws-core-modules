@@ -7,7 +7,7 @@ Terraform modules create internet gateway for VPC.
 ```hcl-terraform
 
 module "vpc_internet_gateway" {
-  source = "git::https://github.com/cloudops92/terraform-aws-modules.git//src/vpc-internet-gateway"
+  source = "git::https://github.com/cloudops92/terraform-aws-base-modules.git//src/vpc-internet-gateway"
 
   name   = "db-subnet"
   vpc_id = "vpc-asda"
@@ -18,7 +18,7 @@ module "vpc_internet_gateway" {
   env            = "learn"
   owner          = "customer"
   email          = "test@customer.ai"
-  repo           = "https://github.com/cloudops92/terraform-aws-modules"
+  repo           = "https://github.com/cloudops92/terraform-aws-base-modules"
   resource_group = "my-resourcegroup"
   deployment     = "default"
   module         = "test"

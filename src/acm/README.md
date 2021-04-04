@@ -19,7 +19,7 @@ terraform {
 }
 
 module "dns_register" {
-  source = "git::https://github.com/cloudops92/terraform-aws-modules.git//src/acm"
+  source = "git::https://github.com/cloudops92/terraform-aws-base-modules.git//src/acm"
 
   dns           = "customer-kube"
   route_53_zone = "aws.dynamicdemand.ai"
@@ -29,7 +29,7 @@ module "dns_register" {
   env            = "learn"
   owner          = "customer"
   email          = "test@customer.ai"
-  repo           = "https://github.com/cloudops92/terraform-aws-modules"
+  repo           = "https://github.com/cloudops92/terraform-aws-base-modules"
   resource_group = "my-resourcegroup"
   deployment     = "default"
   module         = "test"

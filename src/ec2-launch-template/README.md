@@ -18,7 +18,7 @@ module "service-launch-template" {
   env            = "learn"
   owner          = "customer"
   email          = "test@customer.ai"
-  repo           = "https://github.com/cloudops92/terraform-aws-modules"
+  repo           = "https://github.com/cloudops92/terraform-aws-base-modules"
   resource_group = "my-resourcegroup"
   deployment     = "default"
   module         = "test"

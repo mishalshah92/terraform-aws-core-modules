@@ -7,7 +7,7 @@ Terraform modules deploys Redis Elasticache.
 ```hcl-terraform
 
 module "redis-elasticache" {
-  source = "git::https://github.com/cloudops92/terraform-aws-modules.git//src/redis-elasticache"
+  source = "git::https://github.com/cloudops92/terraform-aws-base-modules.git//src/redis-elasticache"
 
   name        = "my-redis"
   description = "my redis cluster"
@@ -54,7 +54,7 @@ module "redis-elasticache" {
   env            = "learn"
   owner          = "customer"
   email          = "test@customer.ai"
-  repo           = "https://github.com/cloudops92/terraform-aws-modules"
+  repo           = "https://github.com/cloudops92/terraform-aws-base-modules"
   resource_group = "my-resourcegroup"
   deployment     = "default"
   module         = "test"

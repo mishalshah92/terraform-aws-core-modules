@@ -7,7 +7,7 @@ Terraform modules create peering between VPCs.
 ```hcl-terraform
 
 module "vpc-peering" {
-  source = "git::https://github.com/cloudops92/terraform-aws-modules.git//src/vpc-peering"
+  source = "git::https://github.com/cloudops92/terraform-aws-base-modules.git//src/vpc-peering"
 
   name   = "my-vpc-peering"
   vpc_id = "vpc-asdsad"
@@ -27,7 +27,7 @@ module "vpc-peering" {
   env            = "learn"
   owner          = "customer"
   email          = "test@customer.ai"
-  repo           = "https://github.com/cloudops92/terraform-aws-modules"
+  repo           = "https://github.com/cloudops92/terraform-aws-base-modules"
   resource_group = "my-resourcegroup"
   deployment     = "default"
   module         = "test"

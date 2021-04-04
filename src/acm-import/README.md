@@ -11,7 +11,7 @@ This module import your existing cert to ACM service..
 ```hcl-terraform
 
 module "acm_import" {
-  source = "git::https://github.com/cloudops92/terraform-aws-modules.git//src/acm-import"
+  source = "git::https://github.com/cloudops92/terraform-aws-base-modules.git//src/acm-import"
 
   name              = "my.dns.com"
   private_key       = "your_private_key"
@@ -23,7 +23,7 @@ module "acm_import" {
   env            = "learn"
   owner          = "customer"
   email          = "test@customer.ai"
-  repo           = "https://github.com/cloudops92/terraform-aws-modules"
+  repo           = "https://github.com/cloudops92/terraform-aws-base-modules"
   resource_group = "my-resourcegroup"
   deployment     = "default"
   module         = "test"

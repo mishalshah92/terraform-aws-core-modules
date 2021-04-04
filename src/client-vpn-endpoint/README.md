@@ -21,7 +21,7 @@ module "vpn-server-certificate" {
   env            = "learn"
   owner          = "customer"
   email          = "test@customer.ai"
-  repo           = "https://github.com/cloudops92/terraform-aws-modules"
+  repo           = "https://github.com/cloudops92/terraform-aws-base-modules"
   resource_group = "my-resourcegroup"
   deployment     = "default"
   module         = "test"
@@ -29,7 +29,7 @@ module "vpn-server-certificate" {
 
 
 module "client-vpn-endpoint" {
-  source = "git::https://github.com/cloudops92/terraform-aws-modules.git//src/client-vpn-endpoint"
+  source = "git::https://github.com/cloudops92/terraform-aws-base-modules.git//src/client-vpn-endpoint"
 
   name        = var.name
   description = "The VPN endpoint for VPC ${var.customer}."
@@ -50,7 +50,7 @@ module "client-vpn-endpoint" {
   env            = "learn"
   owner          = "customer"
   email          = "test@customer.ai"
-  repo           = "https://github.com/cloudops92/terraform-aws-modules"
+  repo           = "https://github.com/cloudops92/terraform-aws-base-modules"
   resource_group = "my-resourcegroup"
   deployment     = "default"
 }

@@ -7,7 +7,7 @@ Terraform modules create peering between VPCs.
 ```hcl-terraform
 
 module "rds-postgresql" {
-  source = "git::https://github.com/cloudops92/terraform-aws-modules.git//src/rds-postgresql"
+  source = "git::https://github.com/cloudops92/terraform-aws-base-modules.git//src/rds-postgresql"
 
   name = "my-db"
 
@@ -61,7 +61,7 @@ module "rds-postgresql" {
   env            = "learn"
   owner          = "customer"
   email          = "test@customer.ai"
-  repo           = "https://github.com/cloudops92/terraform-aws-modules"
+  repo           = "https://github.com/cloudops92/terraform-aws-base-modules"
   resource_group = "my-resourcegroup"
   deployment     = "default"
   module         = "test"
