@@ -22,7 +22,7 @@ module "dns_register" {
   source = "git::https://github.com/cloudops92/terraform-aws-base-modules.git//src/acm"
 
   dns           = "customer-kube"
-  route_53_zone = "aws.dynamicdemand.ai"
+  route_53_zone = "aws.test.com"
   
   # Tags
   customer       = "customer"
