@@ -11,7 +11,7 @@ This module generates create the client VPN endpoint.
 ```hcl-terraform
 
 module "vpn-server-certificate" {
-  source = "git::ssh://micustomer@bitbucket.org/customerteam/terraform-aws-modules.git//terraform/acm"
+  source = "git::https://github.com/cloudops92/terraform-aws-modules.git//terraform/acm"
 
   dns           = "customer"
   route_53_zone = "aws.test.com"

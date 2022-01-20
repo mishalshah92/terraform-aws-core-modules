@@ -11,7 +11,7 @@ This module creates Cloudwatch metric alarm.
 ```hcl-terraform
 
 module "cloudwatch-metric-alarm" {
-  source = "git::ssh://micustomer@bitbucket.org/customerteam/terraform-aws-modules.git//terraform/cloudwatch-metric-alarm"
+  source = "git::https://github.com/cloudops92/terraform-aws-modules.git//terraform/cloudwatch-metric-alarm"
 
   name          = "${local.cloudwatch_alarm_name_prefix}/FreeableMemory"
   comparison_operator = "LessThanThreshold"

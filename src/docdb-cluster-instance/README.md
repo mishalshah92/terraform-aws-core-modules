@@ -11,7 +11,7 @@ This module creates Document DB cluster instance.
 ```hcl-terraform
 
 module "docdb-cluster-instance" {
-  source = "git::ssh://micustomer@bitbucket.org/customerteam/terraform-aws-modules.git//terraform/docdb-cluster-instance"
+  source = "git::https://github.com/cloudops92/terraform-aws-modules.git//terraform/docdb-cluster-instance"
 
   name               = "my-cluster"
   cluster_identifier = "asdasdasd"

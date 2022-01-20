@@ -7,7 +7,7 @@ Terraform modules create launch template for EC2.
 ```hcl-terraform
 
 module "service-launch-template" {
-  source = "git::ssh://micustomer@bitbucket.org/customerteam/terraform-aws-modules.git//terraform/ec2-launch-template"
+  source = "git::https://github.com/cloudops92/terraform-aws-modules.git//terraform/ec2-launch-template"
 
   name = "ServiceTemplate"
   vpc_subnet_id = "subnet-sadasdasd"
