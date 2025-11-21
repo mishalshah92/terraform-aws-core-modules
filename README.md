@@ -1,4 +1,4 @@
-# Terraform AWS Base Modules
+# Terraform AWS Modules
 
 A bunch of AWS modules to deploy AWS infrastructure. These modules are base that means those do not have any dependency
 to other modules.
@@ -33,7 +33,7 @@ to other modules.
 
 ## Overview
 
-- **Maintainer**: mishalshah1992@gmail.com
+- **Maintainer**: mishalshah92@gmail.com
 
 ## Releases
 

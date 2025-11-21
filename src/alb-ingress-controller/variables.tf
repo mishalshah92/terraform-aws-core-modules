@@ -1,6 +1,5 @@
-# general
-
 variable "cluster" {
+  type = string
   description = "Name of the cluster"
 }
 
@@ -11,21 +10,6 @@ variable "namespace" {
 
 variable "service_account_name" {
   type = string
-}
-
-
-# tags
-variable "owner" {
-  type = string
-}
-
-variable "email" {
-  type = string
-}
-
-variable "tool" {
-  description = "Automation tool info"
-  default     = "Managed by Terraform"
 }
 
 variable "tags" {

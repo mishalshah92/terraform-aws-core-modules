@@ -40,5 +40,5 @@ resource "aws_ec2_client_vpn_endpoint" "client_vpn_endpoint" {
 
   transport_protocol = var.transport_protocol
 
-  tags = local.tags
+  tags = var.tags
 }

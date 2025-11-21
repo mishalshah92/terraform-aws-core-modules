@@ -2,6 +2,10 @@ variable "name" {
   type = string
 }
 
+variable "resource_group" {
+  type = string
+}
+
 variable "description" {
   type    = string
   default = "This client VPN is crated using Terraform."
@@ -58,44 +62,6 @@ variable "split_tunnel" {
 variable "transport_protocol" {
   type    = string
   default = "udp"
-}
-
-# tags
-variable "customer" {
-  type = string
-}
-
-variable "env" {
-  type = string
-}
-
-variable "owner" {
-  type = string
-}
-
-variable "email" {
-  type = string
-}
-
-variable "repo" {
-  type = string
-}
-
-variable "deployment" {
-  type = string
-}
-
-variable "module" {
-  type = string
-}
-
-variable "tool" {
-  description = "Automation tool info"
-  default     = "Managed by Terraform"
-}
-
-variable "resource_group" {
-  type = string
 }
 
 variable "tags" {

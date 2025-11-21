@@ -4,19 +4,11 @@ This module generates the SSL cert with the verifications.
 
 ### Development
 
-**Terraform version**: >= `0.12`
+**Terraform version**: >= `1.0`
 
 ### Example
 
 ```hcl-terraform
-
-provider "aws" {
-  region = "us-west-2"
-}
-
-terraform {
-  required_version = ">= 0.12.0"
-}
 
 module "aws_app_ingress_controller" {
   source = "git::https://github.com/pro-works/terraform-ec2-service-module.git//terraform/aws/alb_ingress_controller"
@@ -26,8 +18,16 @@ module "aws_app_ingress_controller" {
   service_account_name = "alb-app-ingress-controller"
 
   # Tags
-  email = "mishal.shah@customer.ai"
-  owner = "mishal"
+  tags = {
+    customer       = "customer"
+    env            = "learn"
+    owner          = "customer"
+    email          = "test@customer.com"
+    repo           = "https://github.com/cloudops92/terraform-aws-base-modules"
+    resource_group = "my-resourcegroup"
+    deployment     = "default"
+    module         = "test"
+  }
 }
 ```
 

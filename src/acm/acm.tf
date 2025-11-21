@@ -1,7 +1,11 @@
+locals {
+  hostname = "${var.dns}.${var.route_53_zone}"
+}
+
 resource "aws_acm_certificate" "acm_cert" {
   domain_name       = local.hostname
   validation_method = "DNS"
-  tags              = local.tags
+  tags              = var.tags
 }
 
 resource "aws_route53_record" "acm_cert_validation" {

@@ -1,5 +1,10 @@
 # https://docs.aws.amazon.com/eks/latest/userguide/alb-ingress.html
 
+locals {
+  name_prefix = "${var.service_account_name}_${var.namespace}_${var.cluster}_${data.aws_region.current.id}"
+  eks_oidc    = replace(data.aws_eks_cluster.eks.identity[0].oidc[0].issuer, "https://", "")
+}
+
 resource "aws_iam_policy" "alb_ingress_policy" {
   name   = local.name_prefix
   path   = "/"
@@ -10,7 +15,7 @@ resource "aws_iam_role" "alb_ingress_role" {
   name               = local.name_prefix
   assume_role_policy = data.aws_iam_policy_document.alb_ingress_iam_assume_policy_document.json
 
-  tags = local.tags
+  tags = var.tags
 }
 
 resource "aws_iam_role_policy_attachment" "role_policy_attachment" {

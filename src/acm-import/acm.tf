@@ -3,5 +3,5 @@ resource "aws_acm_certificate" "acm_cert" {
   certificate_body  = var.certificate_body
   certificate_chain = var.certificate_chain
 
-  tags = local.tags
+  tags = var.tags
 }
