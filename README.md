@@ -1,7 +1,22 @@
-# Terraform AWS Modules
+# Terraform AWS Core Modules
 
-A bunch of AWS modules to deploy AWS infrastructure. These modules are base that means those do not have any dependency
-to other modules.
+This repo is a collection of foundational, reusable Terraform modules designed to provide the 
+essential building blocks for AWS infrastructure. These modules are vanilla, atomic, and 
+dependency-light, enabling teams to compose reliable, consistent, and production-ready 
+architectures with minimal overhead.
+
+This repository serves as the source of truth for core AWS components—networking, compute, storage, security, and platform primitives—that can be consumed directly or assembled into higher-level constructs in downstream repos.
+
+**Key Characteristics:**
+
+- Foundation-first: Modules represent core AWS resources, not opinionated solutions.
+- Composable: Designed to be composed into higher-level architectures.
+- Reusable & consistent: Enforces standard patterns across environments.
+- Minimal assumptions: Lightweight, configurable, and cloud-agnostic patterns where possible.
+- Upstream source: Consumed by repositories like terraform-aws-construct for solution-level deployments.
+
+Use this repository when you need clean, flexible, and production-grade AWS primitives to build 
+infrastructure with Terraform.
 
 ## Modules
 
