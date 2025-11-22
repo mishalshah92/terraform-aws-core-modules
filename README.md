@@ -46,9 +46,10 @@ infrastructure with Terraform.
 - [vpc-route-table](src/vpc-route-table)
 - [vpc-subnet](src/vpc-subnet)
 
-## Overview
+## Maintainer
 
-- **Maintainer**: mishalshah92@gmail.com
+Maintained by Mishal Shah
+📧 mishalshah92@gmail.com
 
 ## Releases
 
