@@ -1,6 +1,6 @@
 # Cluster
 
-variable "cluster_name" {
+variable "cluster_id" {
   type = string
 }
 
@@ -56,14 +56,18 @@ variable "node_ssh_keypair_name" {
   type = string
 }
 
-variable "node_ssh_sg_ids" {
-  type    = list
+variable "node_source_security_group_ids" {
+  type    = list(string)
   default = []
 }
 
 # Tags
 
-variable "customer" {
+variable "owner" {
+  type = string
+}
+
+variable "stack" {
   type = string
 }
 
@@ -71,24 +75,7 @@ variable "env" {
   type = string
 }
 
-variable "owner" {
-  type = string
-}
-
-variable "email" {
-  type = string
-}
-
-variable "repo" {
-  type = string
-}
-
 variable "tool" {
-  description = "Automation tool info"
-  default     = "Managed by Terraform"
-}
-
-variable "tags" {
-  type    = map(string)
-  default = {}
+  type    = string
+  default = "Managed by Terraform"
 }

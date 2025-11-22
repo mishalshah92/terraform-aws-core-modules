@@ -49,7 +49,12 @@ variable "log_types" {
 }
 
 # Tags
-variable "customer" {
+
+variable "owner" {
+  type = string
+}
+
+variable "stack" {
   type = string
 }
 
@@ -57,24 +62,7 @@ variable "env" {
   type = string
 }
 
-variable "owner" {
-  type = string
-}
-
-variable "email" {
-  type = string
-}
-
-variable "repo" {
-  type = string
-}
-
 variable "tool" {
-  description = "Automation tool info"
-  default     = "Managed by Terraform"
-}
-
-variable "tags" {
-  type    = map(string)
-  default = {}
+  type    = string
+  default = "Managed by Terraform"
 }

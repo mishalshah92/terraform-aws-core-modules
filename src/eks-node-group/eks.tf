@@ -1,15 +1,12 @@
-resource "aws_eks_node_group" "eks_node_group" {
-  cluster_name    = data.aws_eks_cluster.eks_cluster.name
+resource "aws_eks_node_group" "eks-node-group" {
+  cluster_name    = data.aws_eks_cluster.eks-cluster.name
   labels          = var.node_labels
   node_group_name = var.node_group_name
-  node_role_arn   = aws_iam_role.node_group_role.arn
+  node_role_arn   = aws_iam_role.example.arn
 
-  dynamic "remote_access" {
-    for_each = var.node_ssh_sg_ids == [] ? [] : ["one_entry"]
-    content {
-      ec2_ssh_key               = var.node_ssh_keypair_name
-      source_security_group_ids = tolist(var.node_ssh_sg_ids)
-    }
+  remote_access {
+    ec2_ssh_key               = var.node_ssh_keypair_name
+    source_security_group_ids = concat(var.node_source_security_group_ids, [aws_security_group.node-security-group.id])
   }
 
   subnet_ids = var.node_subnets
@@ -20,11 +17,19 @@ resource "aws_eks_node_group" "eks_node_group" {
     min_size     = var.scaling_min_size
   }
 
-  tags = local.tags
+  tags = {
+    Name        = local.name_prefix
+    eks-cluster = data.aws_eks_cluster.eks-cluster.name
+    owner       = var.owner
+    stack       = var.stack
+    env         = var.env
+  }
+
+  version = data.aws_eks_cluster.eks-cluster.version
 
   depends_on = [
-    aws_iam_role_policy_attachment.AmazonEKSWorkerNodePolicy,
-    aws_iam_role_policy_attachment.AmazonEKS_CNI_Policy,
-    aws_iam_role_policy_attachment.AmazonEC2ContainerRegistryReadOnly,
+    aws_iam_role_policy_attachment.example-AmazonEKSWorkerNodePolicy,
+    aws_iam_role_policy_attachment.example-AmazonEKS_CNI_Policy,
+    aws_iam_role_policy_attachment.example-AmazonEC2ContainerRegistryReadOnly,
   ]
 }

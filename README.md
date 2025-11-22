@@ -5,7 +5,9 @@ essential building blocks for AWS infrastructure. These modules are vanilla, ato
 dependency-light, enabling teams to compose reliable, consistent, and production-ready 
 architectures with minimal overhead.
 
-This repository serves as the source of truth for core AWS components—networking, compute, storage, security, and platform primitives—that can be consumed directly or assembled into higher-level constructs in downstream repos.
+This repository serves as the source of truth for core AWS components—networking, compute, 
+storage, security, and platform primitives—that can be consumed directly or assembled into 
+higher-level constructs in downstream repos.
 
 **Key Characteristics:**
 
@@ -40,6 +42,8 @@ infrastructure with Terraform.
 - [redis-elasticache](src/redis-elasticache)
 - [resource-group](src/resource-group)
 - [vpc](src/vpc)
+- [vpc-devops](src/vpc-devops)
+- [vpc-eks](src/vpc-eks)
 - [vpc-internet-gateway](src/vpc-internet-gateway)
 - [vpc-nat-gateway](src/vpc-nat-gateway)
 - [vpc-peering](src/vpc-peering)

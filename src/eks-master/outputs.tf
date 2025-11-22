@@ -10,8 +10,8 @@ output "master_iam_role" {
   value = aws_iam_role.master-node.id
 }
 
-output "cluster_sg_id" {
-  value = aws_eks_cluster.master.vpc_config.*.cluster_security_group_id
+output "master_sg_id" {
+  value = aws_security_group.master-cluster.id
 }
 
 output "cluter_version" {
@@ -24,8 +24,4 @@ output "cluster_endpoint" {
 
 output "cluster_id" {
   value = aws_eks_cluster.master.id
-}
-
-output "openid_arn" {
-  value = aws_iam_openid_connect_provider.eks_openid.arn
 }
