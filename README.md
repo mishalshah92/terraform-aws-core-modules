@@ -52,8 +52,7 @@ infrastructure with Terraform.
 
 ## Maintainer
 
-Maintained by Mishal Shah
-📧 mishalshah92@gmail.com
+Mishal Shah -- _mishalshah92@gmail.com_
 
 ## Releases
 
