@@ -19,7 +19,7 @@ terraform {
 }
 
 module "sso" {
-  source = "git::https://github.com/mishalshah92/terraform-aws-modules.git//terraform/sso"
+  source = "git::https://github.com/mishalshah92/terraform-aws-core-modules.git//terraform/sso"
 
   permission_set_name = "AdministratorAccess"
   managed_policy_arns = ["arn:aws:iam::aws:policy/AlexaForBusinessDeviceSetup"]

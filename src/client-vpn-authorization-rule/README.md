@@ -11,7 +11,7 @@ This module creates the authorization rule with Client VPN Endpoint.
 ```hcl-terraform
 
 module "client-vpn-authorization-rule" {
-  source = "git::https://github.com/mishalshah92/terraform-aws-modules.git//terraform/client-vpn-authorization-rule"
+  source = "git::https://github.com/mishalshah92/terraform-aws-core-modules.git//terraform/client-vpn-authorization-rule"
 
   client_vpn_endpoint_id  = "cpvn-sdasdasdasd"
   target_network_cidr     = "10.0.0.0/16"
