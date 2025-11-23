@@ -11,7 +11,7 @@ This module creates the subnet association with Client VPN Endpoint.
 ```hcl-terraform
 
 module "client-vpn-network-association" {
-  source = "git::https://github.com/cloudops92/terraform-aws-modules.git//terraform/client-vpn-network-association"
+  source = "git::https://github.com/mishalshah92/terraform-aws-modules.git//terraform/client-vpn-network-association"
 
   client_vpn_endpoint_id  = "cpvn-sdasdasdasd"
   subnet_id               = "subnet-dfsdfsdfadf"

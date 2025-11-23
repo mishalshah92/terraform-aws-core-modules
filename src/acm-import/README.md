@@ -11,7 +11,7 @@ This module import your existing cert to ACM service..
 ```hcl-terraform
 
 module "acm_import" {
-  source = "git::https://github.com/cloudops92/terraform-aws-modules.git//src/acm-import"
+  source = "git::https://github.com/mishalshah92/terraform-aws-modules.git//src/acm-import"
 
   private_key       = "your_private_key"
   certificate_body  = "your_certificate_body"

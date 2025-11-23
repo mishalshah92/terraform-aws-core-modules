@@ -7,7 +7,7 @@ Terraform modules create route-table for VPC. Route table will get associated wi
 ```hcl-terraform
 
 module "route_table" {
-  source = "git::https://github.com/cloudops92/terraform-aws-base-modules.git//src/vpc-route-table"
+  source = "git::https://github.com/mishalshah92/terraform-aws-base-modules.git//src/vpc-route-table"
 
   name   = "db-route-table"
   vpc_id = "vpc-asda"
@@ -25,7 +25,7 @@ module "route_table" {
   env            = "learn"
   owner          = "customer"
   email          = "test@customer.ai"
-  repo           = "https://github.com/cloudops92/terraform-aws-base-modules"
+  repo           = "https://github.com/mishalshah92/terraform-aws-base-modules"
   resource_group = "my-resourcegroup"
   deployment     = "default"
   module         = "test"

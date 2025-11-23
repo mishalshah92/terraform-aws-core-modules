@@ -11,7 +11,7 @@ This module creates Document DB cluster.
 ```hcl-terraform
 
 module "docdb-cluster" {
-  source = "git::https://github.com/cloudops92/terraform-aws-modules.git//terraform/docdb-cluster"
+  source = "git::https://github.com/mishalshah92/terraform-aws-modules.git//terraform/docdb-cluster"
 
   name                = "my-cluster"
   engine              = "docdb"
@@ -29,7 +29,7 @@ module "docdb-cluster" {
   env            = "learn"
   owner          = "customer"
   email          = "test@customer.ai"
-  repo           = "https://github.com/cloudops92/terraform-aws-base-modules"
+  repo           = "https://github.com/mishalshah92/terraform-aws-base-modules"
   resource_group = "my-resourcegroup"
   deployment     = "default"
   module         = "test"

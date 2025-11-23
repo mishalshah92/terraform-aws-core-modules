@@ -7,7 +7,7 @@ Terraform modules create Resource Group in AWS.
 ```hcl-terraform
 
 module "resource-group" {
-  source = "git::https://github.com/cloudops92/terraform-aws-base-modules.git//src/resource-group"
+  source = "git::https://github.com/mishalshah92/terraform-aws-base-modules.git//src/resource-group"
 
   name                  = "my-resourcegroup"
   resource_type_filters = "AWS::AllSupported"
@@ -28,7 +28,7 @@ module "resource-group" {
   env            = "learn"
   owner          = "customer"
   email          = "test@customer.ai"
-  repo           = "https://github.com/cloudops92/terraform-aws-base-modules"
+  repo           = "https://github.com/mishalshah92/terraform-aws-base-modules"
   resource_group = "my-resourcegroup"
   deployment     = "default"
   module         = "test"

@@ -7,7 +7,7 @@ Terraform modules create VPC.
 ```hcl-terraform
 
 module "vpc" {
-  source = "git::https://github.com/cloudops92/terraform-aws-base-modules.git//src/vpc"
+  source = "git::https://github.com/mishalshah92/terraform-aws-base-modules.git//src/vpc"
 
   name                 = "my-vpc"
   cidr_range           = "10.0.0.0/16"
@@ -19,7 +19,7 @@ module "vpc" {
   env            = "learn"
   owner          = "customer"
   email          = "test@customer.ai"
-  repo           = "https://github.com/cloudops92/terraform-aws-base-modules"
+  repo           = "https://github.com/mishalshah92/terraform-aws-base-modules"
   resource_group = "my-resourcegroup"
   deployment     = "default"
   module         = "test"

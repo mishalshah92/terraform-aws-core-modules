@@ -19,7 +19,7 @@ terraform {
 }
 
 module "sso" {
-  source = "git::https://github.com/cloudops92/terraform-aws-modules.git//terraform/sso"
+  source = "git::https://github.com/mishalshah92/terraform-aws-modules.git//terraform/sso"
 
   permission_set_name = "AdministratorAccess"
   managed_policy_arns = ["arn:aws:iam::aws:policy/AlexaForBusinessDeviceSetup"]
@@ -30,7 +30,7 @@ module "sso" {
   env            = "learn"
   owner          = "samya"
   email          = "test@samya.ai"
-  repo           = "https://github.com/cloudops92/terraform-aws-modules"
+  repo           = "https://github.com/mishalshah92/terraform-aws-modules"
   resource_group = "my-resourcegroup"
   deployment     = "default"
   module         = "test"

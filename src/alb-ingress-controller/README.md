@@ -23,7 +23,7 @@ module "aws_app_ingress_controller" {
     env            = "learn"
     owner          = "customer"
     email          = "test@customer.com"
-    repo           = "https://github.com/cloudops92/terraform-aws-base-modules"
+    repo           = "https://github.com/mishalshah92/terraform-aws-base-modules"
     resource_group = "my-resourcegroup"
     deployment     = "default"
     module         = "test"

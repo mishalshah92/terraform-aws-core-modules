@@ -7,7 +7,7 @@ Terraform modules create kms keys.
 ```hcl-terraform
 
 module "kms-key-generator" {
-  source = "git::https://github.com/cloudops92/terraform-aws-modules.git//terraform/kms-key-generator"
+  source = "git::https://github.com/mishalshah92/terraform-aws-modules.git//terraform/kms-key-generator"
 
   customer_master_key_spec = "SYMMETRIC_DEFAULT"
   description              = "This key is for RDS."
@@ -21,7 +21,7 @@ module "kms-key-generator" {
   env            = "learn"
   owner          = "customer"
   email          = "test@customer.ai"
-  repo           = "https://github.com/cloudops92/terraform-aws-base-modules"
+  repo           = "https://github.com/mishalshah92/terraform-aws-base-modules"
   resource_group = "my-resourcegroup"
   deployment     = "default"
   module         = "test"

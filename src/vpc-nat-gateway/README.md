@@ -7,14 +7,14 @@ Terraform modules create Resource Group in AWS.
 ```hcl-terraform
 
 module "vpc_nat_gateway" {
-  source = "git::https://github.com/cloudops92/terraform-aws-base-modules.git//src/resource-group"
+  source = "git::https://github.com/mishalshah92/terraform-aws-base-modules.git//src/resource-group"
 
   # Tags
   customer       = "customer"
   env            = "learn"
   owner          = "customer"
   email          = "test@customer.ai"
-  repo           = "https://github.com/cloudops92/terraform-aws-base-modules"
+  repo           = "https://github.com/mishalshah92/terraform-aws-base-modules"
   resource_group = "my-resourcegroup"
   deployment     = "default"
   module         = "test"
